@@ -1,0 +1,67 @@
+// DifferencesExample.java
+import java.util.ArrayList;
+
+public class DifferencesExample {
+
+    public static void main(String[] args) {
+
+        // Demonstrating arrays
+        System.out.println("Demonstrating Arrays:");
+
+        // 1. Declaring and initializing an array of integers
+        int[] arrayNumbers = new int[5]; // Fixed size array
+        // Assigning values to the array
+        for (int i = 0; i < arrayNumbers.length; i++) {
+            arrayNumbers[i] = i * 10; // Assigning values: 0, 10, 20, 30, 40
+        }
+
+        // Accessing array elements
+        System.out.print("Array elements: ");
+        for (int i = 0; i < arrayNumbers.length; i++) {
+            System.out.print(arrayNumbers[i] + " ");
+        }
+        System.out.println();
+
+        // Trying to change the size of the array (commented out, will cause error)
+        // int[] newArray = new int[10]; // This is a new declaration, can't resize arrayNumbers
+
+        // ----------------------------------------
+
+        // Demonstrating ArrayLists
+        System.out.println("\nDemonstrating ArrayLists:");
+
+        // 2. Creating an ArrayList of Strings
+        ArrayList<String> arrayListNames = new ArrayList<>(); // Dynamic size
+
+        // Adding elements to the ArrayList
+        arrayListNames.add("Grace");
+        arrayListNames.add("Tim");
+        arrayListNames.add("Russell");
+
+        // Accessing and displaying ArrayList elements
+        System.out.print("ArrayList elements: ");
+        for (String name : arrayListNames) {
+            System.out.print(name + " ");
+        }
+        System.out.println();
+
+        // Removing an element from the ArrayList
+        arrayListNames.remove("Tim");
+        System.out.print("ArrayList after removing 'Tim': ");
+        for (String name : arrayListNames) {
+            System.out.print(name + " ");
+        }
+        System.out.println();
+
+        // The size can change dynamically
+        arrayListNames.add("Brian"); // Adding more elements
+        arrayListNames.add("Mia");
+
+        // Display the updated ArrayList
+        System.out.print("Final ArrayList: ");
+        for (String name : arrayListNames) {
+            System.out.print(name + " ");
+        }
+        System.out.println();
+    }
+}
